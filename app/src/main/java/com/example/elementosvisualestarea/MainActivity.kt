@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val autoCompleteTextView: AutoCompleteTextView = findViewById(R.id.autoCompleteTextView)
+        val autoCompleteTextView: AutoCompleteTextView = findViewById(R.id.activity_main_autoCompleteTextView)
         val breeds = resources.getStringArray(R.array.breeds)
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, breeds)
         autoCompleteTextView.setAdapter(adapter)

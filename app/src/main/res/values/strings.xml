@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">ElementosVisualesTarea</string>
-    <string name="pets_name">Pet\'s Name</string>
+    <string name="txt_header_veterinary">Veterinary Consultations 4 Dogs</string>
+    <string name="txt_pets_name">Pet\'s Name</string>
+    <string name="editText_pets_name">Type your pet\'s name</string>
+    <string name="txt_owner">Owner</string>
+    <string name="editText_owner">Type your complete name</string>
+    <string name="txt_dogs_breed">Breed</string>
+    <string name="txtAutoComplete_dogs_breed">Write your dogs breed</string>
+    <string name="txt_dogs_gender">Gender</string>
 
     <string-array name="breeds">
         <item>Poodle</item>
