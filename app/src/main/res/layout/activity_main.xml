@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -29,7 +35,6 @@
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:backgroundTint="@color/mainColor"
         android:hint="@string/editText_pets_name"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +58,6 @@
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:backgroundTint="@color/mainColor"
         android:hint="@string/editText_owner"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,10 +78,9 @@
 
     <AutoCompleteTextView
         android:id="@+id/activity_main_autoCompleteTextView"
-        android:layout_width="223dp"
-        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:hint="@string/txtAutoComplete_dogs_breed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_main_txt_breed" />
@@ -94,6 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/activity_main_autoCompleteTextView" />
 
     <RadioGroup
+        android:id="@+id/activity_main_buttonGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -118,6 +122,61 @@
 
     </RadioGroup>
 
+    <TextView
+        android:id="@+id/activity_main_txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_date"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_buttonGroup" />
 
+
+    <DatePicker
+        android:id="@+id/activity_main_datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_txt_date" />
+
+    <TextView
+        android:id="@+id/activity_main_txt_notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/txt_notifications"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_datePicker" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Notifications"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_txt_notifications" />
+
+    <Button
+        android:id="@+id/sendEmailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/btn_send_email"
+        android:textSize="20dp"
+        android:backgroundTint="@color/mainColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
