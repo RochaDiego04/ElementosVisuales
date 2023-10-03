@@ -166,11 +166,11 @@
         app:layout_constraintTop_toBottomOf="@+id/activity_main_txt_notifications" />
 
     <Button
-        android:id="@+id/scheduleButton"
+        android:id="@+id/activity_main_btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:text="@string/btn_schedule"
+        android:text="@string/btn_next"
         android:textSize="20dp"
         android:backgroundTint="@color/mainColor"
         app:layout_constraintBottom_toBottomOf="parent"

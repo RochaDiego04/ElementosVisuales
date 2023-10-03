@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">ElementosVisualesTarea</string>
-    <string name="txt_header_veterinary">Veterinary Consultations 4 Dogs</string>
+    <string name="txt_header_veterinary">Veterinary Consults 4 Dogs</string>
     <string name="txt_pets_name">Pet\'s Name</string>
     <string name="editText_pets_name">Type your pet\'s name</string>
     <string name="txt_owner">Owner</string>
     <string name="editText_owner">Type your complete name</string>
     <string name="txt_dogs_breed">Breed</string>
-    <string name="txtAutoComplete_dogs_breed">Write your dogs breed</string>
+    <string name="txtAutoComplete_dogs_breed">Type your dogs breed</string>
     <string name="txt_dogs_gender">Gender</string>
     <string name="txt_date">Date</string>
     <string name="txt_notifications">Notifications</string>
-    <string name="btn_schedule">Schedule</string>
+    <string name="btn_next">Next</string>
 
     <string-array name="breeds">
         <item>Poodle</item>
@@ -28,5 +28,21 @@
         <item>Great Dane</item>
         <item>Dachshund</item>
     </string-array>
+
+    <string name="txt_topic">Consult Topic</string>
+    <string name="txt_branch">Branch</string>
+
+    <string-array name="branch_array">
+        <item>Mexico City Branch, Mexico City</item>
+        <item>Guadalajara Branch, Jalisco</item>
+        <item>Monterrey Branch, Nuevo Leon</item>
+        <item>Tijuana Branch, Baja California</item>
+        <item>Cancun Branch, Quintana Roo</item>
+    </string-array>
+
+
+    <string name="btn_previous">Previous</string>
+    <string name="btn_schedule">Schedule</string>
+
 
 </resources>

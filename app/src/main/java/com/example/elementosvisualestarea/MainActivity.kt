@@ -8,12 +8,15 @@ import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import android.widget.ToggleButton
 import android.widget.Button
+import android.widget.RadioGroup
+import android.widget.RadioButton
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var autoCompleteTextView: AutoCompleteTextView
     private lateinit var toggleButton: ToggleButton
     private lateinit var scheduleButton: Button
+    private lateinit var radioGroup: RadioGroup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,11 +24,13 @@ class MainActivity : AppCompatActivity() {
 
         autoCompleteTextView = findViewById(R.id.activity_main_autoCompleteTextView)
         toggleButton = findViewById(R.id.toggleButton)
-        scheduleButton = findViewById(R.id.scheduleButton)
+        scheduleButton = findViewById(R.id.activity_main_btn_next)
+        radioGroup = findViewById(R.id.activity_main_buttonGroup)
 
         setupAutoCompleteTextView()
         setupToggleButton()
         setupScheduleButton()
+        setupRadioButtonListener()
     }
 
     private fun setupAutoCompleteTextView() {
@@ -46,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupScheduleButton() {
         scheduleButton.setOnClickListener {
-            // Aquí se ejecutará cuando el botón sea clicado
             navigateToSecondActivity()
         }
     }
@@ -66,5 +70,16 @@ class MainActivity : AppCompatActivity() {
     private fun navigateToSecondActivity() {
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun setupRadioButtonListener() {
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            val selectedRadioButton = findViewById<RadioButton>(checkedId)
+            showSelectedGender(selectedRadioButton.text.toString())
+        }
+    }
+
+    private fun showSelectedGender(gender: String) {
+        showToast("Selected Pet's Gender: $gender")
     }
 }
